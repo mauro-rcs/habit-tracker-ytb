@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        {{ config('app.name') }}
-    </title>
-    @vite('resources/css/app.css')
-</head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
+<x-layout class="">
+  <main class="py-10">
+    <h1>
+        Veja Seus Hábitos Aclamados pelo Galã do Amor
     </h1>
-</body>
-</html>
+  </main>
+</x-layout>
