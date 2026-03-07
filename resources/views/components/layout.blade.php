@@ -8,7 +8,7 @@
     </title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-[#eabc28] ">
+<body class="bg-purple-600 ">
     <!--Aqui começa o slot-->
     <x-header/>
     {{ $slot }}
