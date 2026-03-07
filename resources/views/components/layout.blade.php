@@ -8,7 +8,8 @@
     </title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-purple-600 ">
+<body class="bg-purple-700">
+{{--<body class="bg-gradient-to-b from-pink-700 via-purple-700 to-blue-700 ">--}}
     <!--Aqui começa o slot-->
     <x-header/>
     {{ $slot }}
