@@ -4,7 +4,6 @@ use App\Http\Controllers\siteController;
 use Illuminate\Support\Facades\Route;
 //SITE
 Route::get('/', [siteController::class, 'index'])->name('site.index');
-
 //AUTH
 Route::middleware('auth')->group(function () {
     //DASHBOARD
@@ -16,4 +15,6 @@ Route::middleware('auth')->group(function () {
 //LOGIN
 Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'index'])->name('site.login');
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'authenticate'])->name('auth.login');
+Route::get('/cadastro', [\App\Http\Controllers\RegisterController::class, 'index'])->name('site.register');
+Route::post('/cadastro', [\App\Http\Controllers\RegisterController::class, 'store'])->name('auth.register'); //store, auth.register
 
