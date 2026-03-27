@@ -1,4 +1,4 @@
-<header class="bg-blue-700 p-4 border-bottom border-2 flex items-center justify-between font-bold">
+<header class="bg-blue-800 p-4 border-bottom border-2 flex items-center justify-between font-bold">
   {{--LOGO--}}
   <div class="">
       MashTracker

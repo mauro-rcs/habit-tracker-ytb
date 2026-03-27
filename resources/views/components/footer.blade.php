@@ -1,4 +1,4 @@
-<footer class="bg-blue-700 border-t-2 p-4 text-center">
+<footer class="bg-blue-800 border-t-2 p-4 text-center">
     Criado por Mauro Ricardo. Código fonte no
   <a href="https://github.com/mauro-rcs/habit-tracker-ytb"
   class="underline">GitHub</a>
