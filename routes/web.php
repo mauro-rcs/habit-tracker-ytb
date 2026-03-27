@@ -6,11 +6,11 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\RegisterController;
 
 // SITE
-Route::get('/', [SiteController::class, 'index'])->name('site.index');
+Route::get('/', [SiteController::class, 'index'])->name('index');
 
 // AUTH
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('site.dashboard');
+    Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('dashboard');
     Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
 });
 

@@ -49,7 +49,7 @@
         <p>
           <button
             type="submit"
-            class="bg-teal-400 mt-4 font-bold w-full px-3 py-2 shadow-2xl border-2"
+            class="bg-teal-400 mt-4 font-bold w-full px-3 py-2 shadow-2xl border-2 hover:bg-teal-500"
           >
             Enviar
           </button>

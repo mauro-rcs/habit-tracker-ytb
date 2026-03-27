@@ -6,7 +6,7 @@
 
   {{--GITHUB--}}
   <div>
-    <a href="https://github.com/mauro-rcs/habit-tracker-ytb" class="bg-teal-400 px-3 py-2 ml-2 shadow-2xl border-2">
+    <a href="https://github.com/mauro-rcs/habit-tracker-ytb" class="bg-teal-400 hover:bg-teal-500 px-3 py-2 ml-2 shadow-2xl border-2">
       GitHub
     </a>
 
@@ -15,7 +15,7 @@
       <form action="{{ route('auth.logout') }}" method="post" class="inline">
         @csrf
         <button type="submit"
-                class="bg-teal-400 px-3 py-2 ml-2 shadow-2xl border-2">
+                class="bg-teal-400 px-3 py-2 ml-2 shadow-2xl border-2 hover:bg-teal-500">
           Sair</button>
       </form>
     @endauth
