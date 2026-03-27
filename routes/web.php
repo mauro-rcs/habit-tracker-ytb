@@ -1,20 +1,23 @@
 <?php
 
-use App\Http\Controllers\siteController;
 use Illuminate\Support\Facades\Route;
-//SITE
-Route::get('/', [siteController::class, 'index'])->name('site.index');
-//AUTH
+use App\Http\Controllers\SiteController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\RegisterController;
+
+// SITE
+Route::get('/', [SiteController::class, 'index'])->name('site.index');
+
+// AUTH
 Route::middleware('auth')->group(function () {
-    //DASHBOARD
-    Route::get('/dashboard', [siteController::class, 'dashboard'])->name('site.dashboard');
-    //LOGOUT
-    Route::post('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('auth.logout');
+    Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('site.dashboard');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
 });
 
-//LOGIN
-Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'index'])->name('site.login');
-Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'authenticate'])->name('auth.login');
-Route::get('/cadastro', [\App\Http\Controllers\RegisterController::class, 'index'])->name('site.register');
-Route::post('/cadastro', [\App\Http\Controllers\RegisterController::class, 'store'])->name('auth.register'); //store, auth.register
+// LOGIN
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('auth.login');
 
+// REGISTER
+Route::get('/cadastro', [RegisterController::class, 'index'])->name('register');
+Route::post('/cadastro', [RegisterController::class, 'store'])->name('auth.register');
