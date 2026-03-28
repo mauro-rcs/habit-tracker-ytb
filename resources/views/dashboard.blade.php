@@ -1,12 +1,21 @@
 <x-layout class="">
   <main class="py-10 text-white">
-    <h1 class="">
+    <a href="{{ route('habit.create') }}"
+       class="p-2 border-2 bg-white text-black font-bold">
+      Cadastrar Hábito
+    </a>
+
+    @session('success')
+    <div class="flex justify-center">
+      <p class="bg-green-300 border-2 border-green-400 text-black font-bold px-3 py-2">
+        {{session('success')}}
+      </p>
+    </div>
+    @endsession
+
+    <h1 class="text-3xl text-center font-bold">
       Dashboard
     </h1>
-
-    <p>
-      Bem Vindo(a), {{ auth()->user()->name }}!
-    </p>
 
     <h2 class="text-xl mt-4 ">
       Listagem dos Hábitos
@@ -28,7 +37,7 @@
         <p>
           Ainda não tem nenhum hábito cadastrado.
         </p>
-        <a href="/habits/cadastrar"
+        <a href="{{ route('habit.create') }}"
         class="bg-blue-700 p-2 border-2 text-black">
           Cadastre um novo hábito agora
         </a>
