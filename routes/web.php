@@ -21,6 +21,10 @@ Route::middleware('auth')->group(function () {
     //DELETE
     //chama por destroy
     Route::delete('/dashboard/habits/{habit}', [HabitController::class, 'destroy'])->name('habit.destroy');
+
+    //EDIT
+    Route::get('/dashboard/habits/{habit}/edit', [HabitController::class, 'edit'])->name('habit.edit');
+    Route::put('/dashboard/habits/{habit}', [HabitController::class, 'update'])->name('habit.update');
 });
 
 // LOGIN
